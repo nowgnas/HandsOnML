@@ -24,5 +24,6 @@ class CombineAttributesAdder(BaseEstimator, TransformerMixin):
             return np.c_[X, rooms_per_household, population_per_household]
 
 
-attr_adder = CombineAttributesAdder(add_bedrooms_per_room=False)
-housing_extra_attribs = attr_adder.transform(housing.values)
+if __name__ == '__main__':
+    attr_adder = CombineAttributesAdder(add_bedrooms_per_room=False)
+    housing_extra_attribs = attr_adder.transform(housing.values)
